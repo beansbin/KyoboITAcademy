@@ -18,14 +18,15 @@
         document.write(now.getSeconds() + "초<br>");
         document.write(now.getMilliseconds() + "밀리초<br><hr>");
 
-        var next = new Date(2023, 3, 1, 12, 12, 12); // 7은 8월
+        var next = new Date(2023, 3, 1, 12, 12, 12); // 3은 4월
         document.write("next.toLocaleString() : " + next.toLocaleString() + "<br>");
 
+        // 연월일에서 연월일을 뺀 것
         var diff = next - now;
         var day = 1000 * 60 * 60 * 24;
         document.write("차이 일수1 : " + parseInt(diff/day) + "<br>");
 
-        // 위와 다름, 차이 이해하기
+        // 위와 다름, 차이 이해하기 -> 순수하게 DATE인 날짜를 뺀 것. 1 - 21일을 뺀 것
         var diff2 = next.getDate() - now.getDate();
         document.write("차이 일수2 : " + diff2);
     </script>
