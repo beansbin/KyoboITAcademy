@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
     <h3>Date 객체로 현재 시간 알아내기</h3>
     <hr>
@@ -24,11 +26,12 @@
         // 연월일에서 연월일을 뺀 것
         var diff = next - now;
         var day = 1000 * 60 * 60 * 24;
-        document.write("차이 일수1 : " + parseInt(diff/day) + "<br>");
+        document.write("차이 일수1 : " + parseInt(diff / day) + "<br>");
 
         // 위와 다름, 차이 이해하기 -> 순수하게 DATE인 날짜를 뺀 것. 1 - 21일을 뺀 것
         var diff2 = next.getDate() - now.getDate();
         document.write("차이 일수2 : " + diff2);
     </script>
 </body>
+
 </html>

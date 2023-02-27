@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        // 프로토타입 만들기 : 생성자 함수 작성
+        function Account(owner, code, balance) {
+            // 프로퍼티 만들기
+            this.owner = owner; // 계좌 주인 프로퍼티 만들기
+            this.code = code;   // 계좌 코드 프로퍼티 만들기
+            this.balance = balance; // 잔액 프로퍼티 만들기
+
+            // 메소드 만들기
+            this.inquiry= function() { return this.balance; }
+            this.deposit = function (money) { this.balance += money; }
+            this.withdraw = function (money) { // 예금 인출, money느 인출하는 액수
+                // money가 balance보다 작다고 가정
+                this.balance -= money;
+                return money;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>Account 프로토타입 만들기</h3>
+</body>
+</html>
